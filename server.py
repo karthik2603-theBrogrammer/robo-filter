@@ -10,7 +10,7 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
-HOST='192.168.224.186'
+HOST='192.168.34.186'
 PORT=8485
 
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)

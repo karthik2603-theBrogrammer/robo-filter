@@ -1,0 +1,9 @@
+socket
+opencv-python
+pickle 
+numpy 
+struct
+io
+time
+pickle
+zlib
