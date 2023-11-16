@@ -8,7 +8,7 @@ import zlib
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-client_socket.connect(('', 8485))
+client_socket.connect(('192.168.104.42', 8485))
 connection = client_socket.makefile('wb')
 
 cam = cv2.VideoCapture(0)
@@ -19,6 +19,7 @@ cam.set(4, 240);
 img_counter = 0
 
 encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
+# this is used to complress the frame thats got into an jpeg
 
 while True:
     ret, frame = cam.read()

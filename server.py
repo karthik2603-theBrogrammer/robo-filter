@@ -10,7 +10,7 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
-HOST=''
+HOST='192.168.224.186'
 PORT=8485
 
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -65,7 +65,7 @@ while True:
         
         smiles = smile_cascade.detectMultiScale(roi_gray, scaleFactor=1.7, minNeighbors=20)
 
-        # Draw a rectangle around each detected smile within the face region
+        # im drawinf a rectangle around each detected smile within the face region
         # for (sx, sy, sw, sh) in smiles:
         #     cv2.rectangle(roi_color, (sx, sy), (sx+sw, sy+sh), (0, 255, 0), 2)
         #     correlation_percentage = round((sw / w) * 100, 2)
